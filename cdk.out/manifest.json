@@ -1,0 +1,238 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "CdkEndpointStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkEndpointStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkEndpointStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkEndpointStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f572f5badfec57ed36229e3d8493b70e3a8255dc404348a92b60328b6601861.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkEndpointStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkEndpointStack.assets"
+      ],
+      "metadata": {
+        "/CdkEndpointStack/MyVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCAFB07A31"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPublicSubnet1Subnet0C75866A"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPublicSubnet1RouteTable538A9511"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPublicSubnet1RouteTableAssociation8A950D8E"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPublicSubnet1DefaultRouteAF81AA9B"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPrivateSubnet1Subnet641543F4"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPrivateSubnet1RouteTable133BD901"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCPrivateSubnet1RouteTableAssociation85DFBFBB"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCIGW30AB6DD6"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCVPCGWE6F260E1"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCRestrictDefaultSecurityGroupCustomResourceC3FF5EE0"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/FlowLog/IAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCFlowLogIAMRoleF43D8106"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/FlowLog/IAMRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCFlowLogIAMRoleDefaultPolicyED85533B"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/FlowLog/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCFlowLog041B5178"
+          }
+        ],
+        "/CdkEndpointStack/MyVPC/S3Endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVPCS3Endpoint71FFA301"
+          }
+        ],
+        "/CdkEndpointStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/CdkEndpointStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/CdkEndpointStack/VPCFlowLogs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCFlowLogsB87C8F56"
+          }
+        ],
+        "/CdkEndpointStack/MyBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyBucketF68F3FF0"
+          }
+        ],
+        "/CdkEndpointStack/MyLambdaFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunctionServiceRole313A4D46"
+          }
+        ],
+        "/CdkEndpointStack/MyLambdaFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunctionServiceRoleDefaultPolicy23555F9E"
+          }
+        ],
+        "/CdkEndpointStack/MyLambdaFunction/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunctionSecurityGroupDC7B8D8F"
+          }
+        ],
+        "/CdkEndpointStack/MyLambdaFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunction67CCA873"
+          }
+        ],
+        "/CdkEndpointStack/LambdaSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaSecurityGroup0BD9FC99"
+          }
+        ],
+        "/CdkEndpointStack/VpcId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcId"
+          }
+        ],
+        "/CdkEndpointStack/BucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketName"
+          }
+        ],
+        "/CdkEndpointStack/LambdaFunctionName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionName"
+          }
+        ],
+        "/CdkEndpointStack/VPCFlowLogGroup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCFlowLogGroup"
+          }
+        ],
+        "/CdkEndpointStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkEndpointStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CdkEndpointStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkEndpointStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkEndpointStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
